@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1047347336346",
+    "project_id": "vsafe-the-women-safety-app",
+    "storage_bucket": "vsafe-the-women-safety-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047347336346:android:65a7a12712234b0199fb23",
+        "android_client_info": {
+          "package_name": "com.safety.vsafe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR3IGDkrCqcTVkVSSkCBt5wf1lI3EFFXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
