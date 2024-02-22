@@ -1,16 +1,3 @@
-# vsafe
+A women's safety app designed to empower women and provide them with a comprehensive set of tools to enhance their safety. It includes Real-time Location Tracking, Emergency Alerts and SOS, Shake to send alerts, Chatting, Safety Tips and Resources, Fake Calling, Chatbot Support, and more additional functionalities.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![vsafe](https://github.com/HARIOM317/vSafe-women-safety-app/assets/75768277/e98e4c08-7a10-49de-93ec-a305dc017507)
