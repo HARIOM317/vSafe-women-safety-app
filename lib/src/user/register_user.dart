@@ -404,7 +404,8 @@ class _RegisterUserState extends State<RegisterUser> {
                                             child: const Text("Register", style: TextStyle(
                                                 fontFamily: 'PTSans-Regular',
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 18
+                                                fontSize: 18,
+                                              color: Colors.white
                                             ),),
                                           ),
                                         ),

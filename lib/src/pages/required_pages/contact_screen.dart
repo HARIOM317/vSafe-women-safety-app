@@ -164,7 +164,7 @@ class _ContactScreenState extends State<ContactScreen> {
                                         : CircleAvatar(
                                             backgroundColor:
                                                 const Color(0xff401793),
-                                            child: Text(contact.initials()),
+                                            child: Text(contact.initials(), style: const TextStyle(color: Colors.white),),
                                           )
                                     : const CircleAvatar(
                                         backgroundColor: Color(0xff401793),

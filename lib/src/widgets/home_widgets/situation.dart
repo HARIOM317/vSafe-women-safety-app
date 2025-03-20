@@ -143,7 +143,7 @@ class _SituationState extends State<Situation> {
                                 backgroundColor: Colors.deepPurple[100],
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
-                                        Radius.circular(32.0))),
+                                        Radius.circular(24.0))),
                                 title: const Row(
                                   children: [
                                     Padding(
@@ -159,7 +159,7 @@ class _SituationState extends State<Situation> {
                                       child: Text(
                                         "Are you in Danger?",
                                         style:
-                                            TextStyle(color: Color(0xff6a1010)),
+                                            TextStyle(color: Color(0xff6a1010), fontSize: 20, fontWeight: FontWeight.bold),
                                       ),
                                     )
                                   ],

@@ -53,7 +53,7 @@ dependencies:
   flutter_local_notifications: ^14.1.1
   vibration: ^1.7.7
   audioplayers: ^1.0.1
-  flutter_slidable: ^3.0.0
+  flutter_slidable: ^3.1.0
   flutter_faq: ^1.0.1+1
   rating_dialog: ^2.0.4
   store_redirect: ^2.0.1

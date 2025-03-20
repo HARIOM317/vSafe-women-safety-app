@@ -327,6 +327,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   child: Icon(
                     value.visible ? Icons.clear : Icons.menu,
                     key: ValueKey<bool>(value.visible),
+                    color: Colors.white,
                   ),
                 );
               },

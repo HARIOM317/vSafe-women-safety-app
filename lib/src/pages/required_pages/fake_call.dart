@@ -221,16 +221,18 @@ class _FakeCallState extends State<FakeCall> {
                     Navigator.of(context).pop();
                     Navigator.of(context).pop();
                   },
-                  child: const SizedBox(
+                  child: SizedBox(
                     width: 70,
                     height: 70,
                     child: FittedBox(
                       child: FloatingActionButton(
                         onPressed: null,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
                         backgroundColor: Colors.red,
-                        child: Icon(
+                        child: const Icon(
                           Icons.call_end,
                           size: 42,
+                          color: Colors.white,
                         ),
                       ),
                     ),

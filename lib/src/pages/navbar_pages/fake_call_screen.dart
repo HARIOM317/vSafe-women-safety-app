@@ -184,7 +184,8 @@ class _FakeCallScreenState extends State<FakeCallScreen> {
                     child: const Text("Call", style: TextStyle(
                         fontFamily: 'PTSans-Regular',
                         fontWeight: FontWeight.bold,
-                        fontSize: 18
+                        fontSize: 18,
+                        color: Colors.white
                     ),
                     ),
                   ),

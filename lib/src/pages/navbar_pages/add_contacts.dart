@@ -30,11 +30,10 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
   // Position? _currentPosition;
   LocationPermission? permission;
 
-
   _getPermission() async => await Permission.sms.request();
   _isPermissionGranted() async => await Permission.sms.isGranted;
 
-  Future<void> _handleRefresh () async{
+  Future<void> _handleRefresh() async {
     // reloading takes some time
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       showList();
@@ -49,8 +48,9 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
   String lat = "";
   String long = "";
 
-  _getLatLong() async{
-    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+  _getLatLong() async {
+    Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
 
     long = position.longitude.toString();
     lat = position.latitude.toString();
@@ -63,7 +63,6 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
         .then((SmsStatus status) {});
   }
 
-
   _getCurrentLocation() async {
     permission = await Geolocator.checkPermission();
 
@@ -75,14 +74,13 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
     }
 
     Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high,
-        forceAndroidLocationManager: true
-    ).catchError((e){
+            desiredAccuracy: LocationAccuracy.high,
+            forceAndroidLocationManager: true)
+        .catchError((e) {
       Fluttertoast.showToast(msg: "Something went wrong!");
       return e;
     });
   }
-
 
   @override
   void initState() {
@@ -94,7 +92,6 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
       showList();
     });
   }
-
 
   void showList() {
     Future<Database> dbFuture = dataBaseHelper.initializeDatabase();
@@ -117,7 +114,6 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
       showList();
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -157,7 +153,6 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
                   height: 300,
                   animSpeedFactor: 3,
                   showChildOpacityTransition: true,
-
                   child: ListView.builder(
                       physics: const BouncingScrollPhysics(),
                       itemCount: count,
@@ -165,16 +160,18 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
                         return Container(
                           margin: const EdgeInsets.symmetric(horizontal: 5),
                           child: GestureDetector(
-                            onLongPress: () async{
+                            onLongPress: () async {
                               showDialog(
                                   context: context,
                                   builder: (BuildContext context) {
                                     return AlertDialog(
                                       elevation: 10,
-                                      shadowColor: Colors.deepPurple.withOpacity(0.25),
+                                      shadowColor:
+                                          Colors.deepPurple.withOpacity(0.25),
                                       backgroundColor: Colors.deepPurple[100],
                                       shape: const RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(32.0)),
                                       ),
                                       title: const Text('Remove Contact'),
                                       content: const Text(
@@ -185,20 +182,26 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
                                               Navigator.of(context).pop(false);
                                             },
                                             style: ElevatedButton.styleFrom(
-                                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                                              foregroundColor: Colors.deepPurple[900],
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              foregroundColor:
+                                                  Colors.deepPurple[900],
                                             ),
                                             child: const Text("Cancel")),
                                         ElevatedButton(
-                                            onPressed: () async {
-                                              deleteContact(contactList![index]);
-                                              Navigator.of(context).pop(false);
-                                            },
+                                          onPressed: () async {
+                                            deleteContact(contactList![index]);
+                                            Navigator.of(context).pop(false);
+                                          },
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor: Colors.red[300],
-                                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
                                           ),
-                                            child: const Text("Remove"),
+                                          child: const Text("Remove"),
                                         ),
                                       ],
                                     );
@@ -209,21 +212,23 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
                               color: const Color(0xfff5efff),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
-                                  side: const BorderSide(color: Colors.grey, width: 1)),
+                                  side: const BorderSide(
+                                      color: Colors.grey, width: 1)),
                               child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                                padding: const EdgeInsets.only(
+                                    top: 8.0, bottom: 8.0),
                                 child: Slidable(
                                   endActionPane: ActionPane(
                                     motion: const StretchMotion(),
                                     children: [
                                       SlidableAction(
-                                          onPressed: ((context) {
-                                            deleteContact(contactList![index]);
-                                          }),
+                                        onPressed: ((context) {
+                                          deleteContact(contactList![index]);
+                                        }),
                                         icon: Icons.delete,
                                         foregroundColor: Colors.red[900],
-                                        backgroundColor: const Color(0xfff5efff),
+                                        backgroundColor:
+                                            const Color(0xfff5efff),
                                       )
                                     ],
                                   ),
@@ -240,7 +245,8 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
                                               onPressed: () async {
                                                 await FlutterPhoneDirectCaller
                                                     .callNumber(
-                                                        contactList![index].number);
+                                                        contactList![index]
+                                                            .number);
                                               },
                                               icon: Icon(
                                                 Icons.call,
@@ -253,73 +259,124 @@ class _AddContactsScreenState extends State<AddContactsScreen> {
 
                                                 showDialog(
                                                     context: context,
-                                                    builder: (BuildContext context) {
+                                                    builder:
+                                                        (BuildContext context) {
                                                       return AlertDialog(
                                                         elevation: 20,
-                                                        shadowColor: Colors.deepPurple.withOpacity(0.5),
-                                                        backgroundColor: Colors.deepPurple[100],
+                                                        shadowColor: Colors
+                                                            .deepPurple
+                                                            .withOpacity(0.5),
+                                                        backgroundColor: Colors
+                                                            .deepPurple[100],
                                                         shape: const RoundedRectangleBorder(
-                                                            borderRadius: BorderRadius.all(Radius.circular(32.0))
-                                                        ),
+                                                            borderRadius:
+                                                                BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        32.0))),
                                                         title: const Row(
                                                           children: [
                                                             Padding(
-                                                              padding: EdgeInsets.all(8.0),
-                                                              child: Icon(Icons.emergency_share, color: Color(0xff6a1010), size: 30,),
+                                                              padding:
+                                                                  EdgeInsets
+                                                                      .all(8.0),
+                                                              child: Icon(
+                                                                Icons
+                                                                    .emergency_share,
+                                                                color: Color(
+                                                                    0xff6a1010),
+                                                                size: 30,
+                                                              ),
                                                             ),
-
                                                             Padding(
-                                                              padding: EdgeInsets.all(8.0),
-                                                              child: Text("Are you in Trouble?", style: TextStyle(color: Color(0xff6a1010)),),
+                                                              padding:
+                                                                  EdgeInsets
+                                                                      .all(8.0),
+                                                              child: Text(
+                                                                "Are you in Trouble?",
+                                                                style: TextStyle(
+                                                                    color: Color(0xff6a1010), fontSize: 20, fontWeight: FontWeight.bold),
+                                                              ),
                                                             )
                                                           ],
                                                         ),
-
-                                                        content: Text("Do you really want to send an alert SOS message on ${contactList![index].number} ?"),
-
+                                                        content: Text(
+                                                            "Do you really want to send an alert SOS message on ${contactList![index].number} ?"),
                                                         actions: [
                                                           TextButton(
                                                               onPressed: () {
-                                                                Navigator.pop(context);
+                                                                Navigator.pop(
+                                                                    context);
                                                               },
-                                                              child: Text("Cancel", style: TextStyle(color: Colors.green[900]),)
-                                                          ),
-
+                                                              child: Text(
+                                                                "Cancel",
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                            .green[
+                                                                        900]),
+                                                              )),
                                                           TextButton(
-                                                              onPressed: () async {
-                                                                Navigator.of(context).pop(true);
+                                                              onPressed:
+                                                                  () async {
+                                                                Navigator.of(
+                                                                        context)
+                                                                    .pop(true);
 
-                                                                const Duration(milliseconds: 2000);
-                                                                String messageBody = "https://www.google.com/maps/search/?api=1&query=$lat%2C$long";
+                                                                const Duration(
+                                                                    milliseconds:
+                                                                        2000);
+                                                                String
+                                                                    messageBody =
+                                                                    "https://www.google.com/maps/search/?api=1&query=$lat%2C$long";
 
                                                                 String msg = "";
 
-                                                                if(lat == "" || long == ""){
-                                                                  msg = "I am in danger and need your help! Please try to reach me as soon as possible.";
+                                                                if (lat == "" ||
+                                                                    long ==
+                                                                        "") {
+                                                                  msg =
+                                                                      "I am in danger and need your help! Please try to reach me as soon as possible.";
                                                                 } else {
-                                                                  msg = "I am in trouble! Please try to reach me as soon as possible.\nMy current location is $messageBody";
+                                                                  msg =
+                                                                      "I am in trouble! Please try to reach me as soon as possible.\nMy current location is $messageBody";
                                                                 }
 
                                                                 if (await _isPermissionGranted()) {
-                                                                  _sendSMS(contactList![index].number, msg, simSlot: 1);
+                                                                  _sendSMS(
+                                                                      contactList![
+                                                                              index]
+                                                                          .number,
+                                                                      msg,
+                                                                      simSlot:
+                                                                          1);
 
-                                                                  await FlutterPhoneDirectCaller.callNumber("100");
+                                                                  await FlutterPhoneDirectCaller
+                                                                      .callNumber(
+                                                                          "100");
 
-                                                                  Fluttertoast.showToast(
-                                                                      msg:"message sent successfully");
+                                                                  Fluttertoast
+                                                                      .showToast(
+                                                                          msg:
+                                                                              "message sent successfully");
                                                                 } else {
-                                                                  Fluttertoast.showToast(
-                                                                      msg:"Unable to fetch current location!");
+                                                                  Fluttertoast
+                                                                      .showToast(
+                                                                          msg:
+                                                                              "Unable to fetch current location!");
                                                                 }
                                                               },
-                                                              child: const Text("Send", style: TextStyle(color: Color(0xff6a1010)),))
+                                                              child: const Text(
+                                                                "Send",
+                                                                style: TextStyle(
+                                                                    color: Color(
+                                                                        0xff6a1010)),
+                                                              ))
                                                         ],
                                                       );
-                                                    }
-                                                );
+                                                    });
                                               },
                                               icon: Icon(
-                                                CupertinoIcons.chat_bubble_text_fill,
+                                                CupertinoIcons
+                                                    .chat_bubble_text_fill,
                                                 color: Colors.blue[900],
                                               ),
                                             ),

@@ -97,6 +97,10 @@ class _UpdateUserProfile extends State<UpdateUserProfile> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
           title: const Text(
             "Update Your Profile",
             style: TextStyle(

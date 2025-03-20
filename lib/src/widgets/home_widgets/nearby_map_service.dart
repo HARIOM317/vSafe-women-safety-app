@@ -40,18 +40,18 @@ Widget createNearbyWidget(String path, String text) {
   return Padding(
     padding: const EdgeInsets.only(top: 8, bottom: 8, left: 2.5, right: 2.5),
     child: SizedBox(
-      width: 70,
+      width: 60,
       child: Column(
         children: [
           Card(
             color: const Color(0xffddd6f3),
-            elevation: 3,
+            elevation: 2,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(16),
             ),
             child: SizedBox(
-              height: 55,
-              width: 55,
+              height: 50,
+              width: 50,
               child: Center(
                 child: Image.asset(
                   path,
@@ -66,7 +66,7 @@ Widget createNearbyWidget(String path, String text) {
             style: const TextStyle(
                 fontFamily: 'PTSans-Regular',
                 fontSize: 11,
-                fontWeight: FontWeight.bold),
+                fontWeight: FontWeight.w600),
             textAlign: TextAlign.center,
           )
         ],

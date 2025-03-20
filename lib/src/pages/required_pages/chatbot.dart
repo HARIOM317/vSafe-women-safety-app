@@ -1101,6 +1101,10 @@ Creating Safer Environments: By encouraging the use of women's safety apps, soci
       backgroundColor: const Color(0xfff9eae9),
       appBar: AppBar(
         centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: const Text(
           'vSafe Assistant',
           style: TextStyle(

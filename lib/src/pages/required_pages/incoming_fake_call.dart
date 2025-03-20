@@ -122,6 +122,7 @@ class _IncomingFakeCallState extends State<IncomingFakeCall> {
                           child: FittedBox(
                             child: FloatingActionButton(
                               heroTag: 'btn1',
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
                               onPressed: () {
                                 _stopRing();
                                 _isAttendCall = false;
@@ -131,6 +132,7 @@ class _IncomingFakeCallState extends State<IncomingFakeCall> {
                               child: const Icon(
                                 Icons.call_end,
                                 size: 42,
+                                color: Colors.white,
                               ),
                             ),
                           ),
@@ -150,6 +152,7 @@ class _IncomingFakeCallState extends State<IncomingFakeCall> {
                           child: FittedBox(
                             child: FloatingActionButton(
                               heroTag: 'btn2',
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
                               onPressed: () {
                                 _stopRing();
                                 _isAttendCall = true;
@@ -159,6 +162,7 @@ class _IncomingFakeCallState extends State<IncomingFakeCall> {
                               child: const Icon(
                                 Icons.call,
                                 size: 42,
+                                color: Colors.white,
                               ),
                             ),
                           ),

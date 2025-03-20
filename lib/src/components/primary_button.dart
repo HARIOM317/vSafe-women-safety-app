@@ -21,6 +21,7 @@ class PrimaryButton extends StatelessWidget{
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: primaryColor,
+          foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
         ),
         child: Text(title, style: const TextStyle(

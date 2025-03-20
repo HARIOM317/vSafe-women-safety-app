@@ -5,6 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 import 'package:vsafe/src/components/custom_textfield.dart';
 import 'package:vsafe/src/components/primary_button.dart';
+import 'package:vsafe/src/utils/constants.dart';
 
 class UserFeedback extends StatefulWidget {
   const UserFeedback({super.key});
@@ -201,13 +202,13 @@ class _UserFeedbackState extends State<UserFeedback> {
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 5.0),
                                   child: ListTile(
-                                    leading: const SizedBox(
+                                    leading: SizedBox(
                                       height: 35,
                                       child: CircleAvatar(
                                         child: Text(
                                           "User",
                                           style: TextStyle(
-                                              color: Colors.white,
+                                              color: primaryColor,
                                               fontSize: 10,
                                               fontFamily:
                                                   "KaushanScript-Regular"),
@@ -251,10 +252,10 @@ class _UserFeedbackState extends State<UserFeedback> {
                         onPressed: () {
                           showReviewDialog(context);
                         },
-                        elevation: 7,
+                        elevation: 3,
                         icon: const Icon(
                           Icons.rate_review,
-                          color: Colors.white,
+                          color: Colors.black87,
                         ),
                         label: const Text("Tell about your area",
                             style: TextStyle(fontFamily: "PTSans-Regular")),
