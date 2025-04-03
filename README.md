@@ -59,14 +59,14 @@ The Women's Safety App is developed with the goal of enhancing personal security
 ## 📸 Project Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/ee86942d-6597-4f70-a573-af57db52af10" alt="vSafe app" width="350px" />
-  <img src="https://github.com/user-attachments/assets/2efcb8ce-ac0f-41c5-856e-0fa5476ee8c8" alt="vSafe app" width="350px" />
-  <img src="https://github.com/user-attachments/assets/6ba36634-606a-4422-a5db-5c6b2317da8b" alt="vSafe app" width="350px" />
-  <img src="https://github.com/user-attachments/assets/37f702a9-8bed-4ce6-8460-b1ab417cdf28" alt="vSafe app" width="350px" />
-  <img src="https://github.com/user-attachments/assets/e00edd2a-ccd2-4538-b3c3-1228c38d9e68" alt="vSafe app" width="350px" />
-  <img src="https://github.com/user-attachments/assets/babf72e3-856a-46f5-9e3e-254fa0c95087" alt="vSafe app" width="350px" />
-  <img src="https://github.com/user-attachments/assets/cd25b348-c1b7-444a-9b43-bf84262be526" alt="vSafe app" width="350px" />
-  <img src="https://github.com/user-attachments/assets/32cfa84a-d37f-406d-867a-75176b1cbe62" alt="vSafe app" width="350px" />
+  <img src="https://github.com/user-attachments/assets/ee86942d-6597-4f70-a573-af57db52af10" alt="vSafe app" width="300px" />
+  <img src="https://github.com/user-attachments/assets/2efcb8ce-ac0f-41c5-856e-0fa5476ee8c8" alt="vSafe app" width="300px" />
+  <img src="https://github.com/user-attachments/assets/6ba36634-606a-4422-a5db-5c6b2317da8b" alt="vSafe app" width="300px" />
+  <img src="https://github.com/user-attachments/assets/37f702a9-8bed-4ce6-8460-b1ab417cdf28" alt="vSafe app" width="300px" />
+  <img src="https://github.com/user-attachments/assets/e00edd2a-ccd2-4538-b3c3-1228c38d9e68" alt="vSafe app" width="300px" />
+  <img src="https://github.com/user-attachments/assets/babf72e3-856a-46f5-9e3e-254fa0c95087" alt="vSafe app" width="300px" />
+  <img src="https://github.com/user-attachments/assets/cd25b348-c1b7-444a-9b43-bf84262be526" alt="vSafe app" width="300px" />
+  <img src="https://github.com/user-attachments/assets/32cfa84a-d37f-406d-867a-75176b1cbe62" alt="vSafe app" width="300px" />
 </div>
 
 ---
