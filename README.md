@@ -118,8 +118,6 @@ We welcome contributions from the community. To contribute:
   - Make your changes with clear and concise commit messages.
   - Submit a pull request for review.
 
-For any questions or suggestions, please refer to our CONTRIBUTING.md file.
-
 ---
 
 ## 📜 License
