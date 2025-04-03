@@ -123,7 +123,7 @@ For any questions or suggestions, please refer to our CONTRIBUTING.md file.
 ---
 
 ## 📜 License
-This project is licensed under the MIT License. Feel free to use and modify it according to the terms specified.
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify it according to the terms specified.
 
 ---
 
