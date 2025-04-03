@@ -129,9 +129,8 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 
 ## 📞 Contact
 For further information, feedback, or support, please contact:
-
-Project Maintainer: Hariom Singh Rajput
-
-GitHub: @HARIOM317
+  - Project Maintainer: Hariom Singh Rajput
+  - GitHub: [@HARIOM317](https://github.com/HARIOM317)
+  - LinkedIn: [@in/hariom-singh-mewada](https://www.linkedin.com/in/hariom-singh-mewada/)
 
 Stay safe and empowered! 🛡️
